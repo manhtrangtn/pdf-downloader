@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+#service 3: definition of spring-boot app
+  appservice:
+    image: pdf-downloader
+    container_name: pdf-downloader
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
